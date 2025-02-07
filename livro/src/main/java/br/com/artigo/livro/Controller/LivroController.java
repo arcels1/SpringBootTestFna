@@ -17,7 +17,8 @@ public class LivroController {
     @ResponseBody
     @RequestMapping("/livros")
     public List<Livro> listar(){
-        Livro livro = new Livro(234L,"Assim falou zaratusta",2,"Nietchz", Categoria.FICCAO, Modelo.EBOOK);
+
+        Livro  livro = new Livro(234L,"Nietchz",2,"assim falou zaratusta",Categoria.FICCAO,Modelo.EBOOK);
         ConexaoComDataBase conexao = new ConexaoComDataBase();
         conexao.getConexao();
         return Arrays.asList(livro,livro,livro);
